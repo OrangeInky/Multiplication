@@ -61,6 +61,7 @@
         <div>
             <label for="difficulty">难度:</label>
             <select id="difficulty" onchange="changeDifficulty()">
+		<option value="0.5">超级简单</option>
                 <option value="1">简单</option>
                 <option value="2">普通</option>
                 <option value="3">困难</option>
@@ -93,7 +94,7 @@
         let currentScore = 0;
         let maxScore = 0;
         let countdownValue;
-        let difficulty = 1; // Default difficulty level
+        let difficulty = 0.5; // Default difficulty level
 
         function changeDifficulty() {
             difficulty = parseInt(document.getElementById('difficulty').value);	
