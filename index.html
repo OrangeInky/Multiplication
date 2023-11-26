@@ -88,8 +88,8 @@
 			}
 		return array;
 		}
-		
-		let rangeMultiplier = 1
+	let correctAnswerArr = []	
+	let rangeMultiplier = 1
         let maxRange = 12;
         let currentScore = 0;
         let maxScore = 0;
@@ -122,6 +122,7 @@
             const num1 = Math.floor(Math.random() * (maxRange + 1));
             const num2 = Math.floor(Math.random() * (maxRange + 1));
             const correctAnswer = num1 * num2;
+	    correctAnswerArr.push(correctAnswer)
 
             document.getElementById('question').textContent = `${num1} x ${num2} = ?`;
 
@@ -155,6 +156,7 @@
 					maxScore = currentScore;
 				}
             } else {resetScores();}
+	    alert(`错误！正确答案是：${correctAnswerArr[correctAnswer.length-1]}`)
             updateScoreDisplay();
             generateQuestion();
         }
