@@ -149,7 +149,6 @@
         }
 
         function checkAnswer(isCorrect) {
-            stopTimer();
             if (isCorrect) {
                 currentScore++;
 				if (currentScore > maxScore) {
@@ -157,7 +156,7 @@
 				}
             } else {resetScores(); alert(`错误！正确答案是：${correctAnswerArr[correctAnswerArr.length-1]}`);}
             updateScoreDisplay();
-            generateQuestion();
+			stopTimer();
         }
 
         function startTimer() {
